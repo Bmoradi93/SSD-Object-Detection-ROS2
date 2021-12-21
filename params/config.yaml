@@ -1,0 +1,10 @@
+ssd_vehicle_detection:
+  ros__parameters:
+    use_sim_time: False
+    path_to_ssd_model: "/home"
+    path_to_ssd_labels: "/home"
+    number_of_classes: 2
+    input_image_topic: "image_raw"
+    otput_image_topic: "ssd_image_output"
+    output_bounding_box_topic: "bounding_box_location"
+    img_resize_value: 1000
