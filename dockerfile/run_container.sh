@@ -23,7 +23,7 @@ docker run --runtime=nvidia --privileged --rm -itd --gpus all -v /dev:/dev \
             --env=QT_X11_NO_MITSHM=1 \
             --runtime=nvidia \
             --name=deep-foxy\
-            deep-foxy:latest \
+            deep-foxy_1:latest \
             bash
 
 sleep 2
