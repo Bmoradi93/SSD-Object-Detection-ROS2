@@ -1,5 +1,5 @@
 # SSD (Single Shot Multibox Detector) Object Detection, ROS-Foxy Package #
-In order to train your SSD model on your dataset, please refer to ()
+In order to train your SSD model on your dataset, please refer to (https://github.com/Bmoradi93/SSD-Object-Detection-TFOD-Training-Pipeline)[SSD]
 
 Single Shot Multibox Detector (SSD) is a CNN-based network architecture that was introduced by Liu et al in 2015 The bounding box regression algorithm has been taken from Google’s Inception Network. The SSD network is combined with bounding box regression to eliminate and replace the region proposal network that was used in Faster R-CNN network architecture. SSD is able to achieve Faster R-CNN accuracy and obtain 59+ fps.
 
