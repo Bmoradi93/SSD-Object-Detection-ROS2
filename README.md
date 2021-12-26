@@ -30,5 +30,4 @@ The followings are its specifications:
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Behnam Moradi (behnammoradi026@gmail.com)
