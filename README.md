@@ -14,19 +14,37 @@ The followings are its specifications:
 * The inference speed is 52 fps (Single Nvidia GPU-powered PC)
 
 ### How do I get set up? ###
+This ros package comes with a compatible docker image. To run the package, you need to pull and run this docker image.
+1- In your $HOME directory, create a folder and name it 'git':
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```
+cd ~
 
-### Contribution guidelines ###
+mkdir git && cd git && git clone https://github.com/Bmoradi93/SSD-Object-Detection-ROS2.git && git lfs pull
 
-* Writing tests
-* Code review
-* Other guidelines
+```
+
+2- Pull the docker image and run the container:
+
+```
+cd $HOME
+
+docker pull behnammoradi026/deep_learning:ROS2
+
+cd cd $HOME/git/SSD-Object-Detection-ROS2/dockerfile
+
+source run_container.sh
+```
+3- Once your terminal is in the docker container, build the ROS workspace and run the package:
+
+```
+cd $HOME/ros_ws && colcon build
+
+source install/setup.bash
+
+ros2 launch ssd_object_detection ssd_object_detection.launch.py
+```
+
 
 ### Who do I talk to? ###
 
