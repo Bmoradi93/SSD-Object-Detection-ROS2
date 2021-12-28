@@ -8,7 +8,7 @@ def generate_launch_description():
 
     ssd_params = os.path.join(
         get_package_share_directory('ssd_object_detection'),
-        'params',
+        'param',
         'config.yaml'
         )
     
@@ -17,7 +17,7 @@ def generate_launch_description():
             executable='ssd_object_detection_node',
             output='screen',
             name='ssd_node',
-            parameters=[ssd_params])
+            )
     
     ld.add_action(ssd_node)
     return ld

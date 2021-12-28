@@ -24,15 +24,6 @@ class SSD(Node):
 
         print("Initializing the module...")
         # Network Params
-        self. path_to_ssd_model = "/root/ros_ws/src/ssd_object_detection/trained_model/frozen_inference_graph.pb"
-        self.path_to_ssd_labels = "/root/ros_ws/src/ssd_object_detection/trained_model/classes.pbtxt"
-        self.number_of_classes = 2
-        self.input_image_topic = 'image_raw'
-        self.otput_ssd_topic = 'ssd_image_output'
-        self.output_bounding_box_topic = 'bounding_box_location'
-        self.img_resize_value = 500
-        self.min_confidence = 0.6
-        self.COLORS = np.random.uniform(0, 255, size=(self.number_of_classes, 3))
         self.ssd_object = ssd_detection()
         self.ssd_object.load_model()
         self.bridge = CvBridge()
