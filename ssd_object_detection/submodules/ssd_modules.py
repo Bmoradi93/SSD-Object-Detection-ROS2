@@ -13,8 +13,8 @@ session = InteractiveSession(config=config)
 
 class ssd_detection:
     def __init__(self):
-        self.path_to_ssd_model = "/root/ros_ws/src/ssd_object_detection/trained_model/frozen_inference_graph.pb"
-        self.path_to_ssd_labels = "/root/ros_ws/src/ssd_object_detection/trained_model/classes.pbtxt"
+        self.path_to_ssd_model = "/root/autoware_auto_thesis/dockerfiles/AutowareAuto/src/perception/SSD-Object-Detection-ROS2/trained_model/frozen_inference_graph.pb"
+        self.path_to_ssd_labels = "/root/autoware_auto_thesis/dockerfiles/AutowareAuto/src/perception/SSD-Object-Detection-ROS2/trained_model/classes.pbtxt"
         self.number_of_classes = 2
         self.input_image_topic = 'image_raw'
         self.otput_ssd_topic = 'ssd_image_output'
@@ -57,7 +57,7 @@ class ssd_detection:
 
         (H, W) = image.shape[:2]
         output = image.copy()
-        image = cv2.cvtColor(image.copy(), cv2.COLOR_BGR2RGB)
+        # image = cv2.cvtColor(image.copy(), cv2.COLOR_BGR2RGB)
         image = np.expand_dims(image, axis=0)
         return image, output, H, W
 

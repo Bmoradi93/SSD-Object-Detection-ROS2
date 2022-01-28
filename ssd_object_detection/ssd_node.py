@@ -36,7 +36,7 @@ class SSD(Node):
             cv_image = self.bridge.imgmsg_to_cv2(img_raw, "bgr8")
             input_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB)
             output, b_box = self.ssd_object.predict(input_image)
-            ssd_out_img = self.bridge.cv2_to_imgmsg(output, "bgr8")
+            ssd_out_img = self.bridge.cv2_to_imgmsg(output, "rgb8")
             ssd_out_img.header.frame_id = "zed2_camera"
             ssd_out_box.data = b_box
             self.prediced_img_publisher.publish(ssd_out_img)
